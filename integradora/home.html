@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+
+<title>Desponchadora Pancho</TITLE>
+<style>
+body{
+padding:10px;
+}
+table a{
+text-decoration:none;
+color:black;
+}
+#menu{
+text-aling:center;
+width:950	px;
+}
+</style>
+
+</HEAD>
+<A NAME="arriba"></A>
+<BODY background="utpn.jpg">
+<center><img src="icono.png" Width="550px" height="400px"></center>
+<table id="menu" border="solid" align="center">
+<tr>
+     <td><b><font size=8><a href="#abajo">Sobre Nosotros</a></font></b></td>
+	 <td><b><font size=8><a href="Servicios.html">Servicios</a></font</b></td>
+	 <td><b><font size=8><a href="Equipos.html">Equipos</a></font</b></td>
+	 <td><b><font size=8><a href="Contactanos.html">Contactanos</a></font</b></td>
+</tr>
+</table>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Comentarios</title>
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/es.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Comentario section-->
+        <form method="POST" action="./php/enviarcomentario.php">
+            <section id="contact">
+                <div class="container px-4">
+                    <div class="row gx-4 justify-content-center">
+                        <div class="col-lg-8">
+                            <br> <br> <br> <br>
+						
+                                <div class="col-xs-12">
+                                    <h1>¡Haz un Comentario!</h1>
+
+                                    <br>
+                                <div class="form-group">
+                                    <h1><label for="nombre" class="form-label">Nombre</h1></label>
+                                    <input class="form-control" name="nombre" type="text" id="nombre" placeholder="Escribe tu nombre" required >
+                                    </div>
+                            
+                                    
+                            <br>
+                                    <div class="form-group">
+                                    <label for="comentario" class="form-label">Comentario:</label>
+                                    <h1><textarea class="form-control" name="comentario" cols="30" rows="5" type="text" id="comentario" 
+                                    placeholder="Escribe tu comentario......"></textarea></h1>
+                                    </div>
+                            <br>
+                            <input class="btn btn-primary" type="submit"  value="Enviar Comentario">
+                            <br>
+                            <br>
+                            <br>
+                                    <?php
+
+$conexion=mysqli_connect("localhost","root","","ventas"); 
+$resultado= mysqli_query($conexion, 'SELECT * FROM comentarios');
+
+while($comentario = mysqli_fetch_object($resultado)){
+
+    ?>
+
+    <b><?php echo($comentario "nombre");  ?></b>(<?php echo ($comentario "fecha"); ?>) dijo:;
+    <br />
+    <?php echo ($comentario "comentario");?>
+    <br />
+    <hr />
+
+
+
+
+    <?php
+}
+
+                                    ?>
+                            
+                                </form>
+                          
+                </div>
+                
+            </section>
+
+     
+
+
+    </body>
+</html>
+<tr>
+<table></table>
+<A NAME="abajo"><br></A>
+<FONT FACE="0123456789" size="20" COLOR="black"><br>
+<p><center><strong>COMPU ARREGLO</FONT><br></p></center>
+
+<FONT FACE="0123456789" size="5" COLOR="black">
+
+	<strong>
+Nosotros nos encargaremos en arreglar tu dispositivo electrónico,<br>
+aquí puedes publicar tus problemas u orden de trabajo, la persona capacitada tomará tu orden. <br>
+ Estamos aquí para ayudarte <FONT></strong></p><br>
+
+<p><strong>COMPU ARREGLO<br></strong>
+<strong>
+En Compu arreglo contamos con varios servicios:<br>
+(Cambio pasta térmica, cambio de teclados, reparación de disco duros, etc.…)<br>
+En cualquier momento que necesites ayuda, comunícate con nosotros al teléfono 656-556-3198.<br>
+ Mensajes y WhatsApp ¡estamos a tus órdenes!!
+<FONT></strong></p>
+ <br><br><br><br>
+</BODY>
+</HTML>
